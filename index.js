@@ -1,7 +1,13 @@
 const { Client, Collection } = require("discord.js");
 
 const client = new Client({
-    intents: 32767,
+    intents: [
+        "GUILDS",
+        "GUILD_MEMBERS",
+        "GUILD_MESSAGES",
+        "GUILD_BANS",
+        "GUILD_VOICE_STATES"
+    ]
 });
 module.exports = client;
 
