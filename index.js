@@ -18,6 +18,5 @@ client.config = require("./config.json");
 
 // Initializing the project
 require("./handler")(client);
-require('dotenv').config();
 
-client.login(process.env.TOKEN);
+client.login(client.config.token);
